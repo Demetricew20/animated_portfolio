@@ -6,6 +6,7 @@ import {
 } from "@/constants";
 import React from "react";
 import SkillsDataProvider from "../sub/SkillsDataProvider";
+import SkillText from "../sub/SkillText";
 
 const Skills = () => {
   return (
@@ -14,6 +15,7 @@ const Skills = () => {
       style={{ transform: "scale(0.9)" }}
       className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden py-20"
     >
+      <SkillText />
       <div className="flex justify-around flex-wrap mt-4 gap-5 items-center">
         {Frontend_skill.map((image, index) => (
           <SkillsDataProvider
@@ -60,7 +62,15 @@ const Skills = () => {
 
       <div className="h-full w-full absolute">
         <div className="w-full h-full z-[-10] opacity-30 absolute items-center flex justify-center bg-cover">
-          <video className="w-full h-auto" preload="false" playsInline muted loop autoPlay src="/cards-video.webm"  />
+          <video
+            className="w-full h-auto"
+            preload="false"
+            playsInline
+            muted
+            loop
+            autoPlay
+            src="/cards-video.webm"
+          />
         </div>
       </div>
     </section>
