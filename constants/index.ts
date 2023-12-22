@@ -1,3 +1,25 @@
+export const Project_data = [
+  {
+    name: "Amazon Clone",
+    src: "/NextWebsite.png",
+    title: "Clone of Amazon",
+    description: "Project description will go here"
+  },
+  {
+    name: "NetFlix Clone",
+    src: "/SpaceWebsite.png",
+    title: "Clone of Netflix",
+    description: "Project description will go here"
+  },
+  {
+    name: "Disney Clone",
+    src: "/CardImage.png",
+    title: "Clone of Disney",
+    description: "Project description will go here"
+  }
+]
+
+
 export const Skill_data = [
     {
       skill_name: "Html 5",
