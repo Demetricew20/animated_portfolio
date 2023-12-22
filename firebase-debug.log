@@ -1,0 +1,37 @@
+[debug] [2023-12-22T18:54:33.653Z] ----------------------------------------------------------------------
+[debug] [2023-12-22T18:54:33.657Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Demet\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-12-22T18:54:33.658Z] CLI Version:   13.0.2
+[debug] [2023-12-22T18:54:33.658Z] Platform:      win32
+[debug] [2023-12-22T18:54:33.658Z] Node Version:  v20.10.0
+[debug] [2023-12-22T18:54:33.659Z] Time:          Fri Dec 22 2023 12:54:33 GMT-0600 (Central Standard Time)
+[debug] [2023-12-22T18:54:33.659Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-22T18:54:33.736Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-22T18:54:33.737Z] > authorizing via signed-in user (miner.forty9ers@gmail.com)
+[debug] [2023-12-22T18:54:33.742Z] [iam] checking project animation-portfolio-1bace for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-22T18:54:33.744Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/animation-portfolio-1bace:testIamPermissions [none]
+[debug] [2023-12-22T18:54:33.745Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/animation-portfolio-1bace:testIamPermissions x-goog-quota-user=projects/animation-portfolio-1bace
+[debug] [2023-12-22T18:54:33.745Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/animation-portfolio-1bace:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-22T18:54:33.954Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/animation-portfolio-1bace:testIamPermissions 200
+[debug] [2023-12-22T18:54:33.954Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/animation-portfolio-1bace:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-22T18:54:33.955Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/animation-portfolio-1bace [none]
+[debug] [2023-12-22T18:54:34.143Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/animation-portfolio-1bace 200
+[debug] [2023-12-22T18:54:34.143Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/animation-portfolio-1bace {"projectId":"animation-portfolio-1bace","projectNumber":"59787650112","displayName":"animation-portfolio","name":"projects/animation-portfolio-1bace","resources":{"hostingSite":"animation-portfolio-1bace"},"state":"ACTIVE","etag":"1_4c3b1d01-b92a-4e1c-838a-fab80d703913"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-22T18:54:46.356Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/animation-portfolio-1bace/sites/animation-portfolio-1bace [none]
+[debug] [2023-12-22T18:54:46.557Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/animation-portfolio-1bace/sites/animation-portfolio-1bace 200
+[debug] [2023-12-22T18:54:46.557Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/animation-portfolio-1bace/sites/animation-portfolio-1bace {"name":"projects/animation-portfolio-1bace/sites/animation-portfolio-1bace","defaultUrl":"https://animation-portfolio-1bace.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 14.0.4
+
+[info] 
+   Creating an optimized production build ...
+

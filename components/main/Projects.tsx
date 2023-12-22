@@ -10,7 +10,12 @@ const Projects = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10 ">
         {Project_data.map((project, index) => (
-            <ProjectCard src={project.src} title={project.title} description={project.description}  /> 
+          <ProjectCard
+            src={project.src}
+            key={`project-${index}`}
+            title={project.title}
+            description={project.description}
+          />
         ))}
       </div>
     </div>
