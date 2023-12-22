@@ -3,7 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* body, html {
+  background-color: #030216;
+}
+ */
 
 .cursive {
   font-family: "Cedarville Cursive", cursive;
