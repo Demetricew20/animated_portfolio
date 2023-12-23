@@ -158,6 +158,12 @@ export const Skill_data = [
       width: 80,
       height: 80,
     },
+    {
+      skill_name: "Telerik",
+      Image: "/telerik.png",
+      width: 80,
+      height: 80,
+    },
   ];
   
   export const Backend_skill = [
