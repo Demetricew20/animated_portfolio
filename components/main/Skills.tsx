@@ -28,7 +28,7 @@ const Skills = () => {
         >
           <span className="flex text-white items-center justify-center">
             <SparklesIcon className="text-white mr-2 h-5 w-5" />
-            <h1 className="text-[18px]">View unanimated profile.</h1>
+            <h1 className="text-[18px]">View unanimated profile</h1>
           </span>
         </motion.a>
       </div>
