@@ -22,25 +22,24 @@ const HeroContent = () => {
         className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start"
       >
         <motion.div
-          variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
-        >
-          <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text[-13px]">
-            Fullstack Developer Portfolio
-          </h1>
-        </motion.div>
-        <motion.div
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
+          <motion.div className="flex justify-center items-center md:mr-12">
+            <Image
+              src="/personal_picture-no_bg.png"
+              alt="work icons"
+              height={300}
+              width={300}
+              className="opacity-[.7] rounded-full border-4 border-slate-700"
+            />
+          </motion.div>
+
           <span>
-            Providing{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              the best
+              Demetrice Williams
             </span>{" "}
-            project experience
           </span>
         </motion.div>
 
@@ -48,16 +47,30 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          I&apos;m a Full Stack Software Engineer with experience in Website,
-          Mobile, and Software development. Check out my projects and skills.
+          I am a highly motivated software engineer from San Antonio, Tx with a
+          deep passion for front-end engineering who fully embraces teamwork but
+          is very capable of working independently. <br className="mb-5" />
+          My strong desire to build, learn, and teach is equally matched by my
+          love of software development. I bring strong skills in team building,
+          communication, and leadership that will help companies succeed.
+          Through my love of software development, I plan to make a positive
+          impact wherever and whenever I can.
         </motion.p>
 
-        <motion.a
-          variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-xl max-w-[200px]"
-        >
-          Learn More!
-        </motion.a>
+        <div>
+          <motion.a
+            variants={slideInFromLeft(1)}
+            className="py-2 button-primary text-center text-white cursor-pointer rounded-xl max-w-[200px] mr-5 px-2"
+          >
+            Download Resume
+          </motion.a>
+          <motion.a
+            variants={slideInFromLeft(1)}
+            className="py-2 button-primary text-center text-white cursor-pointer rounded-xl max-w-[200px] mr-5 px-2"
+          >
+            Contact Me
+          </motion.a>
+        </div>
       </div>
 
       <motion.div
