@@ -17,7 +17,7 @@ import balsamiq from './balsamiq.png'
 import telerik from './telerik.png'
 import blazor from './blazor.svg'
 import linkedinRound from './linkedin-round.svg'
-import navLogo from './navlogo.png'
+import navLogo from '../public/navlogo.png'
 import astronaut from './astronaut.svg'
 import flashcardImage from './flashcard_app.png'
 import netflixImage from './netflix-clone.jpg'
@@ -53,5 +53,5 @@ export {
     netflixImage,
     flashcardImage,
     sumzItImage,
-    disneyImage
+    disneyImage,
 }
