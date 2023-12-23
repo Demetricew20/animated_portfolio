@@ -4,7 +4,7 @@ import React from "react";
 import { RxGithubLogo } from "react-icons/rx";
 
 interface Props {
-  src: StaticImageData;
+  src: string;
   title: string;
   description: string;
   projectLink: string;
