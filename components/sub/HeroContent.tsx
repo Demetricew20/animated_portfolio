@@ -30,7 +30,7 @@ const HeroContent = () => {
               alt="work icons"
               height={300}
               width={300}
-              className="opacity-[.7] rounded-full border-4 border-slate-700"
+              className="opacity-[.7] rounded-full border-4 border-purple-900"
             />
           </motion.div>
 
