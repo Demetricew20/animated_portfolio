@@ -73,7 +73,7 @@ export const Resume = {
 }
 
 export const NavLogo = {
-  src: '/navlogo.png'
+  src: '/nav-logo.png'
 }
   
   
