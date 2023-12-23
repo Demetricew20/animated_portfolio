@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Socials } from "@/constants";
+import { NavLogo, Socials } from "@/constants";
 
 const Navbar = () => {
   return (
@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="w-full h-full flex  items-center justify-between m-auto md:px-10 px-5">
         <a href="#about" className="h-auto w-auto items-center hidden md:flex">
           <Image
-            src="/navlogo.png"
+            src={NavLogo.src}
             alt="logo"
             width={40}
             height={40}

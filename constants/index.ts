@@ -71,6 +71,10 @@ export const Resume = {
   name: "Demetrice Williams Resume",
   link: "/Demetrice_Williams-Resume.pdf"
 }
+
+export const NavLogo = {
+  src: '/navlogo.png'
+}
   
   
   
