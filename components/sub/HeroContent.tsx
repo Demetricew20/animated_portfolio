@@ -86,10 +86,23 @@ const HeroContent = () => {
             Download Resume
           </motion.a>
           <motion.a
+            href="#contact"
             variants={slideInFromLeft(1)}
             className="py-2 button-primary text-center text-white cursor-pointer rounded-xl md:max-w-[200px] px-2"
           >
             Contact Me
+          </motion.a>
+
+          <motion.a
+            href="https://d-portfolio-ef478.firebaseapp.com/"
+            target="_blank"
+            variants={slideInFromLeft(1)}
+            className="py-2 button-primary text-white text-center cursor-pointer rounded-xl md:max-w-[400px] px-2"
+          >
+            <span className="flex text-white items-center justify-center">
+              <SparklesIcon className="text-white mr-2 h-5 w-5" />
+              <h1 className="text[-13px]">Visit 3d Portfolio</h1>
+            </span>
           </motion.a>
         </div>
       </div>
