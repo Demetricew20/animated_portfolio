@@ -21,13 +21,15 @@ const Projects = () => {
       <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
         My Projects
       </h1>
-      <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10 items-center justify-center ">
+      <div className="h-full w-full flex flex-col md:flex-row flex-wrap gap-10 px-10 items-center justify-center ">
         {Project_data.map((project, index) => (
           <ProjectCard
             src={project.src}
             key={`project-${index}`}
             title={project.title}
             description={project.description}
+            projectLink={project.projectLink}
+            deployLink={project.deployedLink}
           />
         ))}
       </div>

@@ -1,21 +1,54 @@
 export const Project_data = [
   {
     name: "Amazon Clone",
-    src: "/NextWebsite.png",
-    title: "Clone of Amazon",
-    description: "Project description will go here"
+    src: "/amazon_clone.jpg",
+    title: "Amazon Clone",
+    description: "Replicated version of Amazon where users can create an account, add products to their cart, make simulated payments via Stripe, and view their order history.",
+    projectLink: "https://github.com/Demetricew20/Amazon_Clone",
+    deployedLink: "https://clone-fbc7a.web.app/",
   },
   {
     name: "NetFlix Clone",
-    src: "/SpaceWebsite.png",
-    title: "Clone of Netflix",
-    description: "Project description will go here"
+    src: "/netflix-clone.jpg",
+    title: "Netflix Clone",
+    description: "Netflix clone project built using React, Redux, Firebase, Strip, and Google authentication. Users can create an account and mimic subscription payments. Data is pulled from IMDb API.",
+    projectLink: "https://github.com/Demetricew20/NetflixClone",
+    deployedLink: "https://netflix-clone-fd696.firebaseapp.com/",
   },
   {
     name: "Disney Clone",
-    src: "/CardImage.png",
-    title: "Clone of Disney",
-    description: "Project description will go here"
+    src: "/disney-clone.jpg",
+    title: "Disney Clone",
+    description: "Disney-plus Clone developed using ReactJS, Redux, React JS, Styled Components, and Firebase.",
+    projectLink: "https://github.com/Demetricew20/Disney_Plus_Clone",
+    deployedLink: "https://disney-plus-clone-40446.web.app/",
+  }
+  ,
+  {
+    name: "Sumzit",
+    src: "/SumzIt.png",
+    title: "Sumzit",
+    description: "Article Summarizer App using OpenAI's GPT model. Built with React, Redux, and Tailwind css.",
+    projectLink: "https://github.com/Demetricew20/SumzIt",
+    deployedLink: "https://sumzit-d5185.firebaseapp.com/",
+  }
+  ,
+  {
+    name: "Trash Collector",
+    src: "/trash_collector.jpg",
+    title: "Trash Collector",
+    description: "Web app for private mock waste management company utilizing Python, Django, and MySQL.",
+    projectLink: "https://github.com/Demetricew20/SweepStakes",
+    deployedLink: "https://disney-plus-clone-40446.web.app/",
+  }
+  ,
+  {
+    name: "Stack Study",
+    src: "/flashcard_app.png",
+    title: "Stack Study",
+    description: "Responsive flashcard application built with React, Python, Django, and MySQL that allows users to create cards and card collections for studying.",
+    projectLink: "https://github.com/Demetricew20/SweepStakes",
+    deployedLink: "https://disney-plus-clone-40446.web.app/",
   }
 ]
 
@@ -106,10 +139,13 @@ export const Skill_data = [
     {
       name: "LinkedIn",
       src: "/linkedin.svg",
+      link: 'https://www.linkedin.com/in/demetricewilliams/'
     },
     {
       name: "Github",
       src: "/gitwhite.png",
+      link: 'https://github.com/Demetricew20'
+
     },
   ];
   
