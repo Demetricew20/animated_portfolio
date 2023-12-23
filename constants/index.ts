@@ -1,7 +1,13 @@
+import { amazonImage, disneyImage, flashcardImage, netflixImage, sumzItImage, trashCollectorImage } from "../public";
+
+
+
+
+
 export const Project_data = [
   {
     name: "Amazon Clone",
-    src: "/amazon_clone.jpg",
+    src: amazonImage,
     title: "Amazon Clone",
     description: "Replicated version of Amazon where users can create an account, add products to their cart, make simulated payments via Stripe, and view their order history.",
     projectLink: "https://github.com/Demetricew20/Amazon_Clone",
@@ -9,7 +15,7 @@ export const Project_data = [
   },
   {
     name: "NetFlix Clone",
-    src: "/netflix-clone.jpg",
+    src: netflixImage,
     title: "Netflix Clone",
     description: "Netflix clone project built using React, Redux, Firebase, Strip, and Google authentication. Users can create an account and mimic subscription payments. Data is pulled from IMDb API.",
     projectLink: "https://github.com/Demetricew20/NetflixClone",
@@ -17,7 +23,7 @@ export const Project_data = [
   },
   {
     name: "Disney Clone",
-    src: "/disney-clone.jpg",
+    src: disneyImage,
     title: "Disney Clone",
     description: "Disney-plus Clone developed using ReactJS, Redux, React JS, Styled Components, and Firebase.",
     projectLink: "https://github.com/Demetricew20/Disney_Plus_Clone",
@@ -26,7 +32,7 @@ export const Project_data = [
   ,
   {
     name: "Sumzit",
-    src: "/SumzIt.png",
+    src: sumzItImage,
     title: "Sumzit",
     description: "Article Summarizer App using OpenAI's GPT model. Built with React, Redux, and Tailwind css.",
     projectLink: "https://github.com/Demetricew20/SumzIt",
@@ -35,7 +41,7 @@ export const Project_data = [
   ,
   {
     name: "Trash Collector",
-    src: "/trash_collector.jpg",
+    src: trashCollectorImage,
     title: "Trash Collector",
     description: "Web app for private mock waste management company utilizing Python, Django, and MySQL.",
     projectLink: "https://github.com/Demetricew20/SweepStakes",
@@ -44,7 +50,7 @@ export const Project_data = [
   ,
   {
     name: "Stack Study",
-    src: "/flashcard_app.png",
+    src: flashcardImage,
     title: "Stack Study",
     description: "Responsive flashcard application built with React, Python, Django, and MySQL that allows users to create cards and card collections for studying.",
     projectLink: "https://github.com/Demetricew20/SweepStakes",

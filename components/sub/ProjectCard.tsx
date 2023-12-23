@@ -1,10 +1,10 @@
 import { LinkIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { RxGithubLogo } from "react-icons/rx";
 
 interface Props {
-  src: string;
+  src: StaticImageData;
   title: string;
   description: string;
   projectLink: string;
