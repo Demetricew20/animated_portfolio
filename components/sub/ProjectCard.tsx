@@ -19,7 +19,7 @@ const ProjectCard = ({
   deployLink,
 }: Props) => {
   return (
-    <div className="relative overflow-hidden rounded-lg md:w-[25rem] lg:w-[30rem] lg:h-[27rem] shadow-lg border border-[#2a0e61]">
+    <div className="relative overflow-hidden rounded-lg md:w-[25rem] lg:w-[30rem] h-[30rem] shadow-lg border border-[#2a0e61]">
       <Image
         src={src}
         alt={title}
@@ -33,7 +33,7 @@ const ProjectCard = ({
         <p className="mt-2 text-gray-300 ">{description}</p>
       </div>
 
-      <span className="text-white text-2xl flex absolute bottom-2 gap-4 left-2 z-[100]">
+      <span className="text-white text-2xl flex absolute bottom-2 gap-4 left-2 z-[45]">
         <a href={projectLink} target="_blank">
           <LinkIcon width={25} height={25} />
         </a>
