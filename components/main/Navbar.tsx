@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { Socials } from "@/constants";
-import { navLogo } from "@/public";
 
 const Navbar = () => {
   return (
