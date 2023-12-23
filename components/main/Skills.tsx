@@ -19,13 +19,13 @@ const Skills = () => {
       <SkillText />
 
       <div className="flex justify-around flex-wrap mt-4 gap-5 items-center">
-        {Skill_data.map((image, index) => (
+        {Full_stack.map((image, index) => (
           <SkillsDataProvider
             src={image.Image}
             width={image.width}
             height={image.height}
             index={index}
-            key={`skill-data${index}`}
+            key={`fullstack-skill-data${index}`}
           />
         ))}
       </div>
@@ -50,30 +50,6 @@ const Skills = () => {
             height={image.height}
             index={index}
             key={`backend-skill-data${index}`}
-          />
-        ))}
-      </div>
-
-      <div className="flex justify-around flex-wrap mt-4 gap-5 items-center">
-        {Full_stack.map((image, index) => (
-          <SkillsDataProvider
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-            key={`fullstack-skill-data${index}`}
-          />
-        ))}
-      </div>
-
-      <div className="flex justify-around flex-wrap mt-4 gap-5 items-center">
-        {Other_skill.map((image, index) => (
-          <SkillsDataProvider
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-            key={`other-skill-data${index}`}
           />
         ))}
       </div>
