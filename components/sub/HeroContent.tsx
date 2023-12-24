@@ -41,8 +41,8 @@ const HeroContent = () => {
                   src={social.src}
                   alt={social.name}
                   key={`social-${index}`}
-                  width={36}
-                  height={36}
+                  width={social.width}
+                  height={social.height}
                 />
               </a>
             ))}

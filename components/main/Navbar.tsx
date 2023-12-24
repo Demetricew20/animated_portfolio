@@ -20,7 +20,7 @@ const Navbar = () => {
           </span>
         </a>
 
-        <div className="w-[500px] h-full flex items-center justify-between gap-5">
+        <div className="md:w-[500px] h-full w-full flex items-center justify-between gap-5">
           <div className="flex items-center justify-between border border-[#7042f861] bg-[#0300145e]  px-[20px] py-[10px] rounded-full text-gray-200">
             <a href="#about" className="cursor-pointer">
               About
@@ -38,15 +38,15 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex gap-5 hidden md:flex">
+        <div className="flex gap-5 hidden md:flex items-center">
           {Socials.map((social, index) => (
             <a key={index} href={social.link} target="_blank">
               <Image
                 src={social.src}
                 alt={social.name}
                 key={`social-${index}`}
-                width={24}
-                height={24}
+                width={social.height}
+                height={social.width}
               />
             </a>
           ))}
