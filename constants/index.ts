@@ -12,7 +12,7 @@ export const Project_data = [
     name: "NetFlix Clone",
     src: "/netflix-clone.jpg",
     title: "Netflix Clone",
-    description: "Netflix clone project built using React, Redux, Firebase, Strip, and Google authentication. Users can create an account and mimic subscription payments. Data is pulled from IMDb API.",
+    description: "Netflix clone project built using React, Redux, Firebase, Strip, and Google authentication." + " Users can create an account and mimic subscription payments. Data is pulled from IMDb API.",
     projectLink: "https://github.com/Demetricew20/NetflixClone",
     deployedLink: "https://netflix-clone-fd696.web.app/",
   },
