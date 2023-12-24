@@ -39,8 +39,8 @@ export const Project_data = [
     src: "/trash_collector.jpg",
     title: "Trash Collector",
     description: "Web app for private mock waste management company utilizing Python, Django, and MySQL.",
-    projectLink: "https://github.com/Demetricew20/SweepStakes",
-    deployedLink: "https://disney-plus-clone-40446.web.app/",
+    projectLink: "https://github.com/Demetricew20/TrashCollector",
+    deployedLink: "",
   }
   ,
   {
@@ -48,8 +48,8 @@ export const Project_data = [
     src: "/flashcard_app.png",
     title: "Stack Study",
     description: "Responsive flashcard application built with React, Python, Django, and MySQL that allows users to create cards and card collections for studying.",
-    projectLink: "https://github.com/Demetricew20/SweepStakes",
-    deployedLink: "https://disney-plus-clone-40446.web.app/",
+    projectLink: "https://github.com/Demetricew20/Flashcards_UI",
+    deployedLink: "",
   }
 ]
 

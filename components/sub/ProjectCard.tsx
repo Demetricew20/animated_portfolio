@@ -34,11 +34,13 @@ const ProjectCard = ({
       </div>
 
       <span className="text-white text-2xl flex absolute bottom-2 gap-4 left-2 z-[45]">
-        <a href={projectLink} target="_blank">
-          <LinkIcon width={25} height={25} />
-        </a>
+        {deployLink !== "" && (
+          <a href={deployLink} target="_blank">
+            <LinkIcon width={25} height={25} />
+          </a>
+        )}
 
-        <a href={deployLink} target="_blank" className="cursor-pointer">
+        <a href={projectLink} target="_blank" className="cursor-pointer">
           <RxGithubLogo />
         </a>
       </span>
