@@ -3,6 +3,8 @@
 import React, { createRef, useRef, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import variables from "@/env";
 // @ts-ignore
@@ -15,7 +17,6 @@ const useForm = (callback: any, initialState = {}) => {
 
   const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.name === "name") {
-      console.log(event.target.value);
       if (event.target.value !== "") {
         setNameHasValue(true);
       } else {
@@ -24,7 +25,6 @@ const useForm = (callback: any, initialState = {}) => {
     }
 
     if (event.target.name === "email") {
-      console.log(event.target.value);
       if (event.target.value !== "") {
         setEmailHasValue(true);
       } else {
@@ -32,13 +32,11 @@ const useForm = (callback: any, initialState = {}) => {
       }
     }
 
-    console.log(nameHasValue);
     setValues({ ...values, [event.target.name]: event.target.value });
   };
 
   const onTextAreaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     if (event.target.name === "message") {
-      console.log(event.target.value);
       if (event.target.value !== "") {
         setMessageHasValue(true);
       } else {
@@ -47,9 +45,9 @@ const useForm = (callback: any, initialState = {}) => {
     }
     setValues({ ...values, [event.target.name]: event.target.value });
   };
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (event: any) => {
     event.preventDefault();
-    await callback(event); // triggering the callback
+    await callback(event);
   };
 
   // return values
@@ -71,6 +69,7 @@ const Contact = () => {
     message: "",
   };
 
+  const formRef = useRef<HTMLFormElement>(null);
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   const messageRef = useRef<HTMLTextAreaElement | null>(null);
@@ -86,69 +85,48 @@ const Contact = () => {
     values,
   } = useForm(formCallback, formState);
 
-  async function formCallback() {
+  async function formCallback(event: any) {
+    const formData = formRef.current;
+
+    if (formData === null) return;
+
     setSendingMessage(true);
     // send email
     const publicKey = process.env.EMAILJS_PUBLIC_KEY as string;
     const serviceId = process.env.EMAILJS_SERVICE_ID as string;
     const templateId = process.env.EMAILJS_TEMPLATE_ID as string;
-    console.log("public", publicKey);
-    console.log("serviceId", serviceId);
-    console.log("templateId", templateId);
 
-    emailjs.init(publicKey);
-
-    console.log(nameRef.current);
-    console.log(emailRef.current);
+    if (
+      nameRef.current === null ||
+      emailRef.current == null ||
+      messageRef.current == null
+    ) {
+      return;
+    }
 
     await emailjs
-      .send(serviceId, templateId, {
-        name: nameRef?.current?.value,
-        recipient: emailRef?.current?.value,
-      })
+      .send(
+        serviceId,
+        templateId,
+        {
+          from_name: nameRef.current.value,
+          message: messageRef.current.value,
+          email_sender: emailRef.current.value,
+        },
+        publicKey
+      )
       .then(() => {
         //show success
+        toast.success("Message sent!");
       })
       .catch((error) => {
         //show error
-
-        console.log(error);
+        toast.error("An error occurred.");
       })
       .finally(() => {
         setSendingMessage(false);
+        event.target.reset();
       });
-
-    // emailjs
-    //   .send(
-    //     process.env.VITE_APP_EMAILJS_SERVICE_ID as string,
-    //     process.env.VITE_APP_EMAILJS_TEMPLATE_ID as string,
-    //     {
-    //       from_name: formState.name,
-    //       to_name: "Demetrice",
-    //       from_email: formState.email,
-    //       to_email: "demetrice_williams@hotmail.com",
-    //       message: formState.message,
-    //     },
-    //     this
-    //   )
-    //   .then(() => {
-    //     // showAlert({
-    //     //   show: true,
-    //     //   text: "Message sent successfully!",
-    //     //   type: "success",
-    //     // });
-    //     // setTimeout(() => {
-    //     //   setForm({ name: "", email: "", message: "" });
-    //     // }, 5000);
-    //   })
-    //   .catch((error) => {
-    //     //show error
-    //     // showAlert({
-    //     //   show: true,
-    //     //   text: "An Error has occurred.",
-    //     //   type: "danger",
-    //     // });
-    //   });
   }
 
   return (
@@ -163,6 +141,7 @@ const Contact = () => {
 
         <div className="flex md:flex-row flex-wrap w-full flex-col-reverse  md:gap-[2rem] lg:gap-[10rem]">
           <form
+            ref={formRef}
             onSubmit={onSubmit}
             className="py-10 border border-slate-500 flex flex-col  rounded-lg w-full lg:w-1/2 gap-7 px-4"
           >
@@ -243,6 +222,19 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </section>
   );
 };
