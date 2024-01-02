@@ -93,7 +93,7 @@ const HeroContent = () => {
             Contact Me
           </motion.a>
 
-          <motion.a
+          {/* <motion.a
             href="https://d-portfolio-ef478.firebaseapp.com/"
             target="_blank"
             variants={slideInFromLeft(1)}
@@ -103,7 +103,7 @@ const HeroContent = () => {
               <SparklesIcon className="text-white mr-2 h-5 w-5" />
               <h1 className="text[-13px]">Visit 3d Portfolio</h1>
             </span>
-          </motion.a>
+          </motion.a> */}
         </div>
       </div>
 
